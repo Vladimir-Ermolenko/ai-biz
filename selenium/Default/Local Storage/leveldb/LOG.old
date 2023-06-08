@@ -1,0 +1,8 @@
+2023/06/08-18:08:38.382 2c03 Reusing MANIFEST /Users/voverm/PycharmProjects/ai-biz/selenium/Default/Local Storage/leveldb/MANIFEST-000001
+2023/06/08-18:08:38.383 2c03 Recovering log #107
+2023/06/08-18:08:38.384 2c03 Reusing old log /Users/voverm/PycharmProjects/ai-biz/selenium/Default/Local Storage/leveldb/000107.log 
+2023/06/08-18:09:12.244 3103 Level-0 table #111: started
+2023/06/08-18:09:12.251 3103 Level-0 table #111: 12950 bytes OK
+2023/06/08-18:09:12.259 3103 Delete type=0 #107
+2023/06/08-18:11:18.013 3103 Level-0 table #113: started
+2023/06/08-18:11:18.042 3103 Level-0 table #113: 9992 bytes OK

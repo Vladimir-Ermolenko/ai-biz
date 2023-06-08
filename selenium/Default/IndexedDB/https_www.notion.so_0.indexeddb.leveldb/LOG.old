@@ -1,0 +1,14 @@
+2023/06/08-18:09:06.657 8b03 Reusing MANIFEST /Users/voverm/PycharmProjects/ai-biz/selenium/Default/IndexedDB/https_www.notion.so_0.indexeddb.leveldb/MANIFEST-000001
+2023/06/08-18:09:06.657 8b03 Recovering log #135
+2023/06/08-18:09:06.657 8b03 Reusing old log /Users/voverm/PycharmProjects/ai-biz/selenium/Default/IndexedDB/https_www.notion.so_0.indexeddb.leveldb/000135.log 
+2023/06/08-18:09:06.657 8b03 Delete type=2 #133
+2023/06/08-18:09:07.211 b403 Level-0 table #140: started
+2023/06/08-18:09:07.215 b403 Level-0 table #140: 2730 bytes OK
+2023/06/08-18:09:07.222 b403 Delete type=0 #135
+2023/06/08-18:09:07.222 8007 Manual compaction at level-0 from '\x00$\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00%\x00\x00\x00' @ 0 : 0; will stop at '\x00$\x00\x00\x05' @ 2631 : 1
+2023/06/08-18:09:07.222 8007 Compacting 1@0 + 1@1 files
+2023/06/08-18:09:07.227 8007 Generated table #141@0: 674 keys, 9204 bytes
+2023/06/08-18:09:07.227 8007 Compacted 1@0 + 1@1 files => 9204 bytes
+2023/06/08-18:09:07.235 8007 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/06/08-18:09:07.235 8007 Delete type=2 #140
+2023/06/08-18:09:07.236 8007 Manual compaction at level-0 from '\x00$\x00\x00\x05' @ 2631 : 1 .. '\x00%\x00\x00\x00' @ 0 : 0; will stop at (end)

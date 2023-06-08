@@ -24,6 +24,7 @@ app = FastAPI()
 
 chrome_options = Options()
 chrome_options.add_argument("user-data-dir=selenium")
+chrome_options.add_argument("--remote-debugging-port=9222")
 driver = webdriver.Chrome(options=chrome_options)
 
 
@@ -57,21 +58,17 @@ async def webhook(request: Request):
 async def invite(email: str):
     action = ActionChains(driver)
 
-    driver.get(f"https://www.notion.so/")
-    time.sleep(random.uniform(0.8, 3.4))
+    driver.get(f"https://www.notion.so/login")
+    time.sleep(random.uniform(0.8, 2.4))
 
-    login_button = None
+    email_input = None
     try:
-        login_button = driver.find_element(by=By.XPATH, value="//*[text()='Log in']")
+        email_input = driver.find_element(by=By.ID, value="notion-email-input-1")
     except NoSuchElementException:
         pass
-    if login_button:
-        action.move_to_element(to_element=login_button).click().perform()
-        time.sleep(random.uniform(1.2, 2.1))
-
-        email_input = driver.find_element(by=By.ID, value="notion-email-input-1")
+    if email_input:
         email_input.click()
-        time.sleep(random.uniform(0.3, 1.1))
+        time.sleep(random.uniform(1.2, 2.1))
         email_input.send_keys(config.get("EMAIL"))
         time.sleep(random.uniform(1.1, 2.2))
         email_input.send_keys(Keys.ENTER)

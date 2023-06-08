@@ -1,5 +1,0 @@
-[61298:259:0608/181121.552716:WARNING:chrome_main_delegate.cc(593)] This is Chrome version 114.0.5735.106 (not a warning)
-[61298:259:0608/181122.223924:INFO:chrome_browser_cloud_management_controller.cc(167)] Starting CBCM Controller Initialization
-[61298:259:0608/181122.224507:INFO:chrome_browser_cloud_management_controller.cc(195)] No machine level policy manager exists.
-[61298:259:0608/181141.270918:INFO:CONSOLE(1)] "2023-06-08T10:11:41.270Z [info] FeatureFlagTransactionQueue: preferIndexedDB [object Object]", source: https://www.notion.so/4090-4cd08d284984ec7c776b.js (1)
-[61298:259:0608/181231.200290:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

@@ -55,8 +55,35 @@ async def webhook(request: Request):
 
 
 async def invite(email: str):
+    action = ActionChains(driver)
+
     driver.get(f"https://www.notion.so/")
     time.sleep(random.uniform(0.8, 3.4))
+
+    login_button = None
+    try:
+        login_button = driver.find_element(by=By.XPATH, value="//*[text()='Log in']")
+    except NoSuchElementException:
+        pass
+    if login_button:
+        action.move_to_element(to_element=login_button).click().perform()
+        time.sleep(random.uniform(1.2, 2.1))
+
+        email_input = driver.find_element(by=By.ID, value="notion-email-input-1")
+        email_input.click()
+        time.sleep(random.uniform(0.3, 1.1))
+        email_input.send_keys(config.get("EMAIL"))
+        time.sleep(random.uniform(1.1, 2.2))
+        email_input.send_keys(Keys.ENTER)
+        time.sleep(random.uniform(0.4, 1.3))
+
+        password_input = driver.find_element(by=By.ID, value="notion-password-input-2")
+        password_input.click()
+        time.sleep(random.uniform(0.2, 0.9))
+        password_input.send_keys(config.get("PASSWORD"))
+        time.sleep(random.uniform(0.9, 1.2))
+        password_input.send_keys(Keys.ENTER)
+        time.sleep(random.uniform(5.3, 8.1))
 
     share_button = driver.find_element(by=By.CLASS_NAME, value="notion-topbar-share-menu")
     share_button.click()
@@ -76,17 +103,20 @@ async def invite(email: str):
     except NoSuchElementException:
         logger.info(f"User with email {email} is Already in The Page")
     if access_button:
-        action = ActionChains(driver)
         action.move_to_element(to_element=access_button).click().perform()
         time.sleep(random.uniform(0.6, 1.1))
 
         can_view_button = driver.find_element(by=By.XPATH, value="//*[text()='Can view']")
-        action = ActionChains(driver)
         action.move_to_element(to_element=can_view_button).click().perform()
         time.sleep(random.uniform(0.4, 1))
 
         email_input = driver.find_element(by=By.XPATH, value="//input[@type='email']")
         email_input.send_keys(Keys.ENTER)
+        time.sleep(random.uniform(2.4, 3.7))
+
+        logger.info(f"User with email {email} is Invited")
+
+        driver.quit()
 
 
 if __name__ == "__main__":

@@ -1,0 +1,5 @@
+.idea
+resources/config.yaml
+resources/creds.json
+logs
+venv
